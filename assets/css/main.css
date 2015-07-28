@@ -74,10 +74,10 @@
 		}
 
 	a {
-		-moz-transition: border-color 0.2s ease-in-out;
-		-webkit-transition: border-color 0.2s ease-in-out;
-		-ms-transition: border-color 0.2s ease-in-out;
-		transition: border-color 0.2s ease-in-out;
+		-moz-transition: border-color 0.1s ease-in-out;
+		-webkit-transition: border-color 0.1s ease-in-out;
+		-ms-transition: border-color 0.1s ease-in-out;
+		transition: border-color 0.1s ease-in-out;
 		border-bottom: dotted 1px;
 		color: inherit;
 		outline: 0;
@@ -110,51 +110,29 @@
 
 /* Wrapper */
 
-	@-moz-keyframes wrapper {
-		0% {
-			opacity: 0;
+	/* Wrapper fade in animation */
+		@-moz-keyframes wrapper {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-
-		100% {
-			opacity: 1;
+		@-webkit-keyframes wrapper {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-	}
-
-	@-webkit-keyframes wrapper {
-		0% {
-			opacity: 0;
+		@-ms-keyframes wrapper {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-
-		100% {
-			opacity: 1;
+		@keyframes wrapper {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-	}
-
-	@-ms-keyframes wrapper {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes wrapper {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
 
 	#wrapper {
-		-moz-animation: wrapper 3s forwards;
-		-webkit-animation: wrapper 3s forwards;
-		-ms-animation: wrapper 3s forwards;
-		animation: wrapper 3s forwards;
+		-moz-animation: wrapper 1s forwards;
+		-webkit-animation: wrapper 1s forwards;
+		-ms-animation: wrapper 1s forwards;
+		animation: wrapper 1s forwards;
 		height: 100%;
 		left: 0;
 		opacity: 0;
@@ -178,7 +156,6 @@
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
-	/* Set your background with this */
 
 		background: #348cb2 url("../images/bg.jpg") bottom left;
 		background-repeat: repeat-x;
@@ -260,51 +237,29 @@
 
 /* Overlay */
 
-	@-moz-keyframes overlay {
-		0% {
-			opacity: 0;
+	/* Overlay fade in animation */
+		@-moz-keyframes overlay {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-
-		100% {
-			opacity: 1;
+		@-webkit-keyframes overlay {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-	}
-
-	@-webkit-keyframes overlay {
-		0% {
-			opacity: 0;
+		@-ms-keyframes overlay {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-
-		100% {
-			opacity: 1;
+		@keyframes overlay {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
-	}
-
-	@-ms-keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
 
 	#overlay {
-		-moz-animation: overlay 1.5s 1.5s forwards;
-		-webkit-animation: overlay 1.5s 1.5s forwards;
-		-ms-animation: overlay 1.5s 1.5s forwards;
-		animation: overlay 1.5s 1.5s forwards;
+		-moz-animation: overlay 1.5s 0.5s forwards;
+		-webkit-animation: overlay 1.5s 0.5s forwards;
+		-ms-animation: overlay 1.5s 0.5s forwards;
+		animation: overlay 1.5s 0.5s forwards;
 		background-attachment: fixed, fixed;
 		background-image: url("../images/overlay-pattern.png"), url("../images/overlay.svg");
 		background-position: top left, center center;
@@ -340,155 +295,149 @@
 
 /* Header */
 
-	@-moz-keyframes header {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
+	/* Header text slide up animation */
+		@-moz-keyframes header {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
 
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes header {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
-		}
-
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes header {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
+		@-webkit-keyframes header {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
 
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes header {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
-		}
-
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@-moz-keyframes nav-icons {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
+		@-ms-keyframes header {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
 
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes nav-icons {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
-		}
-
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes nav-icons {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
+		@keyframes header {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
 
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
+	/* Header icons slide up animation */
+		@-moz-keyframes nav-icons {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
-	}
 
-	@keyframes nav-icons {
-		0% {
-			-moz-transform: translate3d(0,1em,0);
-			-webkit-transform: translate3d(0,1em,0);
-			-ms-transform: translate3d(0,1em,0);
-			transform: translate3d(0,1em,0);
-			opacity: 0;
+		@-webkit-keyframes nav-icons {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
 
-		100% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-			opacity: 1;
+		@-ms-keyframes nav-icons {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
 		}
-	}
+
+		@keyframes nav-icons {
+			0% {
+				-moz-transform: translate3d(0,1em,0);
+				-webkit-transform: translate3d(0,1em,0);
+				-ms-transform: translate3d(0,1em,0);
+				transform: translate3d(0,1em,0);
+				opacity: 0;
+			}
+			100% {
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				opacity: 1;
+			}
+		}
 
 	#header {
-		-moz-animation: header 1s 2.25s forwards;
-		-webkit-animation: header 1s 2.25s forwards;
-		-ms-animation: header 1s 2.25s forwards;
-		animation: header 1s 2.25s forwards;
+		-moz-animation: header 1.5s 1s forwards;
+		-webkit-animation: header 1.5s 1s forwards;
+		-ms-animation: header 1.5s 1s forwards;
+		animation: header 1.5s 1s forwards;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -532,10 +481,10 @@
 		}
 
 			#header nav li {
-				-moz-animation: nav-icons 0.5s ease-in-out forwards;
-				-webkit-animation: nav-icons 0.5s ease-in-out forwards;
-				-ms-animation: nav-icons 0.5s ease-in-out forwards;
-				animation: nav-icons 0.5s ease-in-out forwards;
+				-moz-animation: nav-icons 0.25s ease-in-out forwards;
+				-webkit-animation: nav-icons 0.25s ease-in-out forwards;
+				-ms-animation: nav-icons 0.25s ease-in-out forwards;
+				animation: nav-icons 0.25s ease-in-out forwards;
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -554,73 +503,36 @@
 			}
 
 				#header nav li:nth-child(1) {
+					-moz-animation-delay: 1.75s;
+					-webkit-animation-delay: 1.75s;
+					-ms-animation-delay: 1.75s;
+					animation-delay: 1.75s;
+				}
+				#header nav li:nth-child(2) {
+					-moz-animation-delay: 2s;
+					-webkit-animation-delay: 2s;
+					-ms-animation-delay: 2s;
+					animation-delay: 2s;
+				}
+				#header nav li:nth-child(3) {
+					-moz-animation-delay: 2.25s;
+					-webkit-animation-delay: 2.25s;
+					-ms-animation-delay: 2.25s;
+					animation-delay: 2.25s;
+				}
+
+				#header nav li:nth-child(4) {
 					-moz-animation-delay: 2.5s;
 					-webkit-animation-delay: 2.5s;
 					-ms-animation-delay: 2.5s;
 					animation-delay: 2.5s;
 				}
 
-				#header nav li:nth-child(2) {
+				#header nav li:nth-child(5) {
 					-moz-animation-delay: 2.75s;
 					-webkit-animation-delay: 2.75s;
 					-ms-animation-delay: 2.75s;
 					animation-delay: 2.75s;
-				}
-
-				#header nav li:nth-child(3) {
-					-moz-animation-delay: 3s;
-					-webkit-animation-delay: 3s;
-					-ms-animation-delay: 3s;
-					animation-delay: 3s;
-				}
-
-				#header nav li:nth-child(4) {
-					-moz-animation-delay: 3.25s;
-					-webkit-animation-delay: 3.25s;
-					-ms-animation-delay: 3.25s;
-					animation-delay: 3.25s;
-				}
-
-				#header nav li:nth-child(5) {
-					-moz-animation-delay: 3.5s;
-					-webkit-animation-delay: 3.5s;
-					-ms-animation-delay: 3.5s;
-					animation-delay: 3.5s;
-				}
-
-				#header nav li:nth-child(6) {
-					-moz-animation-delay: 3.75s;
-					-webkit-animation-delay: 3.75s;
-					-ms-animation-delay: 3.75s;
-					animation-delay: 3.75s;
-				}
-
-				#header nav li:nth-child(7) {
-					-moz-animation-delay: 4s;
-					-webkit-animation-delay: 4s;
-					-ms-animation-delay: 4s;
-					animation-delay: 4s;
-				}
-
-				#header nav li:nth-child(8) {
-					-moz-animation-delay: 4.25s;
-					-webkit-animation-delay: 4.25s;
-					-ms-animation-delay: 4.25s;
-					animation-delay: 4.25s;
-				}
-
-				#header nav li:nth-child(9) {
-					-moz-animation-delay: 4.5s;
-					-webkit-animation-delay: 4.5s;
-					-ms-animation-delay: 4.5s;
-					animation-delay: 4.5s;
-				}
-
-				#header nav li:nth-child(10) {
-					-moz-animation-delay: 4.75s;
-					-webkit-animation-delay: 4.75s;
-					-ms-animation-delay: 4.75s;
-					animation-delay: 4.75s;
 				}
 
 			#header nav a {
@@ -631,10 +543,10 @@
 			}
 
 				#header nav a:before {
-					-moz-transition: all 0.2s ease-in-out;
-					-webkit-transition: all 0.2s ease-in-out;
-					-ms-transition: all 0.2s ease-in-out;
-					transition: all 0.2s ease-in-out;
+					-moz-transition: all 0.1s ease-in-out;
+					-webkit-transition: all 0.1s ease-in-out;
+					-ms-transition: all 0.1s ease-in-out;
+					transition: all 0.1s ease-in-out;
 					border-radius: 100%;
 					border: solid 1px #fff;
 					display: block;
@@ -699,9 +611,10 @@
 	  background: rgba(0, 0, 0, 0.3);
 	  z-index: 99999;
 	  opacity: 0;
-	  -webkit-transition: opacity 400ms ease-in-out;
-	  -moz-transition: opacity 400ms ease-in-out;
-	  transition: opacity 400ms ease-in-out;
+	  -webkit-transition: opacity 0.25s ease-in-out;
+	  -moz-transition: opacity 0.25s ease-in-out;
+	  -ms-transition: opacity 0.25s ease-in-out;
+	  transition: opacity 0.25s ease-in-out;
 	  pointer-events: none;
 	}
 
@@ -743,9 +656,11 @@
 		  border: none;
 		  -webkit-border-radius: 12px;
 		  -moz-border-radius: 12px;
+		  -ms-border-radius: 12px;
 		  border-radius: 12px;
-		  -moz-box-shadow: 1px 1px 3px #000;
 		  -webkit-box-shadow: 1px 1px 3px #000;
+		  -moz-box-shadow: 1px 1px 3px #000;
+		  -ms-box-shadow: 1px 1px 3px #000;
 		  box-shadow: 1px 1px 3px #000;
 		}
 
