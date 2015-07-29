@@ -29,11 +29,8 @@ Options -Indexes
     <FilesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|svg)$">
         Header set Cache-Control "max-age=2592000, public"
     </FilesMatch>
-    <FilesMatch "\\.(css)$">
+    <FilesMatch "\\.(css|js)$">
         Header set Cache-Control "max-age=604800, public"
-    </FilesMatch>
-    <FilesMatch "\\.(js)$">
-        Header set Cache-Control "max-age=216000, private"
     </FilesMatch>
     <FilesMatch "\\.(xml|txt)$">
         Header set Cache-Control "max-age=216000, public, must-revalidate"
